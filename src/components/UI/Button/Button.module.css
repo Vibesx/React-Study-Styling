@@ -1,4 +1,5 @@
 .button {
+  width: 100%; /* this sets width to 100% for any case other than the one defined in @media */
   font: inherit;
   padding: 0.5rem 1.5rem;
   border: 1px solid #8b005d;
@@ -17,4 +18,11 @@
   background: #ac0e77;
   border-color: #ac0e77;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+}
+
+/* this sets custom css for devices that have screen width over 768px; note: overrides existing properties and keeps those not in conflict */
+@media (min-width: 768px) {
+  .button {
+    width: auto;
+  }
 }
